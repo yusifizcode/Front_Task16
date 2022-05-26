@@ -1,0 +1,548 @@
+nav {
+  padding: 10px;
+  margin-top: 45px;
+}
+
+nav .mini-menu {
+  position: absolute;
+  padding: 30px;
+  width: 140px;
+  left: -30px;
+  opacity: 0;
+  height: 100px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  overflow: hidden;
+  z-index: 10;
+  background-color: white;
+  visibility: visible;
+}
+
+nav .nav-logo img {
+  max-width: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+nav .nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 0 9%;
+  padding-right: 20px;
+}
+
+nav .nav-menu li {
+  list-style: none;
+  -webkit-transition: border-bottom 2s;
+  transition: border-bottom 2s;
+  position: relative;
+  z-index: 10000;
+}
+
+nav .nav-menu li:hover {
+  cursor: pointer;
+}
+
+nav .nav-menu li:hover .mini-menu {
+  opacity: 1;
+  height: 200px;
+  z-index: 10000;
+  visibility: visible;
+}
+
+nav .nav-menu li::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background-color: black;
+  bottom: -1px;
+  left: 0%;
+  border-radius: 3px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+nav .nav-menu li:hover::before {
+  width: 100%;
+  z-index: 10000;
+}
+
+nav .nav-menu .nav-home {
+  border-bottom: 1px solid black;
+}
+
+nav .search-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+nav .search-section i {
+  font-size: 25px;
+}
+
+nav .icon-badge {
+  font-size: 8px;
+  color: white;
+  padding: 5px;
+}
+
+nav .shopping-menu {
+  font-size: 15px;
+  list-style: none;
+  position: absolute;
+  top: 50px;
+  left: -70px;
+  width: 200px;
+  font-family: sans-serif;
+  font-weight: 100;
+  background-color: white;
+  border: 1px solid #bdbdbd;
+  padding: 30px 20px;
+  color: #525050;
+  opacity: 0;
+  z-index: 10;
+}
+
+nav .fa-bag-shopping:hover {
+  cursor: pointer;
+}
+
+nav .fa-bag-shopping:hover .shopping-menu {
+  opacity: 1;
+}
+
+.first-slide-section {
+  position: relative;
+}
+
+.slider-head-text {
+  font-family: 'Playfair Display';
+  font-size: 380%;
+  font-weight: 400;
+}
+
+.slider-text {
+  position: absolute;
+  left: 14%;
+  top: 25%;
+}
+
+.flowers {
+  color: red;
+}
+
+pre {
+  font-family: 'Lora';
+  font-size: 110%;
+  color: #959393;
+}
+
+#main-content {
+  padding-top: 57px;
+  padding-bottom: 75px;
+}
+
+#main-content .flowers-list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 27px;
+  padding: 0;
+}
+
+#main-content .flowers-list .flower-item {
+  margin-right: 32px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#main-content .flowers-list .flower-item:hover {
+  color: red;
+}
+
+#main-content .flowers-list .flower-item.active {
+  color: red;
+}
+
+#main-content .product-content .product-img {
+  cursor: pointer;
+  width: 100%;
+  overflow: hidden;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#main-content .product-content .product-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#main-content .product-content .product-img img:hover {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+#main-content .product-content .product-desc {
+  margin-top: 23px;
+  text-align: center;
+}
+
+#main-content .product-content .product-desc h6 {
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#main-content .product-content .product-desc .add-to-cart {
+  font-size: 12px;
+  cursor: pointer;
+  left: 39%;
+  opacity: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+#main-content .product-content .product-desc .add-to-cart:hover {
+  color: red;
+}
+
+#main-content .product-content .product-desc .product-price {
+  font-size: 12px;
+  right: 45%;
+  opacity: 1;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+#main-content .product-content:hover .add-to-cart {
+  opacity: 1;
+  -webkit-transform: translateX(1%);
+          transform: translateX(1%);
+}
+
+#main-content .product-content:hover .product-price {
+  opacity: 0;
+  right: 15% !important;
+}
+
+.video {
+  background-color: #f7f7f7;
+  margin: 15px 0;
+}
+
+.video .video-img {
+  width: 650px;
+  height: 420px;
+  margin: 120px 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.video .video-img:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+.video .play-icon {
+  color: red;
+  background-color: white;
+  position: absolute;
+  left: 250px;
+  top: 280px;
+  padding: 35px 45px;
+  border-radius: 50%;
+  font-size: 25px;
+}
+
+.video .play-video {
+  overflow: hidden;
+  position: relative;
+}
+
+.video .vido-button {
+  color: red;
+  background-color: transparent;
+  border: none;
+}
+
+.video .video-word {
+  margin: 120px 0px;
+  padding: 0 90px;
+  font-family: 'Playfair Display';
+}
+
+.video .video-word .video-p-word {
+  margin-top: 27px;
+  color: #959393;
+  font-family: 'Lora';
+}
+
+.user {
+  margin-top: 120px;
+}
+
+.user h1 {
+  font-family: 'Playfair Display';
+}
+
+.user .title-word {
+  font-family: 'Lora';
+  font-size: 110%;
+  color: #959393;
+}
+
+.user .user-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 50px;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v29/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDTbtPY_Q.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* vietnamese */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v29/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDYbtPY_Q.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v29/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDZbtPY_Q.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v29/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtM.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/lora/v24/0QIhMX1D_JOuMw_LLPtLp_A.woff2) format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+/* cyrillic */
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/lora/v24/0QIhMX1D_JOuMw_LJftLp_A.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* vietnamese */
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/lora/v24/0QIhMX1D_JOuMw_LLvtLp_A.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/lora/v24/0QIhMX1D_JOuMw_LL_tLp_A.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/lora/v24/0QIhMX1D_JOuMw_LIftL.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 500;
+  src: url(https://fonts.gstatic.com/s/lora/v24/0QIhMX1D_JOuMw_LLPtLp_A.woff2) format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+/* cyrillic */
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 500;
+  src: url(https://fonts.gstatic.com/s/lora/v24/0QIhMX1D_JOuMw_LJftLp_A.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* vietnamese */
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 500;
+  src: url(https://fonts.gstatic.com/s/lora/v24/0QIhMX1D_JOuMw_LLvtLp_A.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 500;
+  src: url(https://fonts.gstatic.com/s/lora/v24/0QIhMX1D_JOuMw_LL_tLp_A.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 500;
+  src: url(https://fonts.gstatic.com/s/lora/v24/0QIhMX1D_JOuMw_LIftL.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/lora/v24/0QIhMX1D_JOuMw_LLPtLp_A.woff2) format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+/* cyrillic */
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/lora/v24/0QIhMX1D_JOuMw_LJftLp_A.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* vietnamese */
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/lora/v24/0QIhMX1D_JOuMw_LLvtLp_A.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/lora/v24/0QIhMX1D_JOuMw_LL_tLp_A.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/lora/v24/0QIhMX1D_JOuMw_LIftL.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/lora/v24/0QIvMX1D_JOuMwf7I-NP.woff2) format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+/* cyrillic */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/lora/v24/0QIvMX1D_JOuMw77I-NP.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* vietnamese */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/lora/v24/0QIvMX1D_JOuMwX7I-NP.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/lora/v24/0QIvMX1D_JOuMwT7I-NP.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/lora/v24/0QIvMX1D_JOuMwr7Iw.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 500;
+  src: url(https://fonts.gstatic.com/s/lora/v24/0QIvMX1D_JOuMwf7I-NP.woff2) format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/*# sourceMappingURL=style.css.map */
